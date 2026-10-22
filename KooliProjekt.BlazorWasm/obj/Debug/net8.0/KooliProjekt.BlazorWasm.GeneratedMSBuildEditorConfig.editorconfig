@@ -1,0 +1,120 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EntryPointFilePath = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = KooliProjekt.BlazorWasm
+build_property.RootNamespace = KooliProjekt.BlazorWasm
+build_property.ProjectDir = D:\progejan\KooliProjekt.BlazorWasm\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = false
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\progejan\KooliProjekt.BlazorWasm
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[D:/progejan/KooliProjekt.BlazorWasm/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/progejan/KooliProjekt.BlazorWasm/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/progejan/KooliProjekt.BlazorWasm/Pages/DeodItemEdit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVvZEl0ZW1FZGl0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/progejan/KooliProjekt.BlazorWasm/Pages/DeodItems.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVvZEl0ZW1zLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/progejan/KooliProjekt.BlazorWasm/Pages/EmployeeEdit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVFZGl0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/progejan/KooliProjekt.BlazorWasm/Pages/EmployeePatientEdit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVQYXRpZW50RWRpdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/progejan/KooliProjekt.BlazorWasm/Pages/EmployeePatients.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVQYXRpZW50cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/progejan/KooliProjekt.BlazorWasm/Pages/Employees.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/progejan/KooliProjekt.BlazorWasm/Pages/FoodEntries.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9vZEVudHJpZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/progejan/KooliProjekt.BlazorWasm/Pages/FoodEntryEdit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9vZEVudHJ5RWRpdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/progejan/KooliProjekt.BlazorWasm/Pages/FoodItemEdit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9vZEl0ZW1FZGl0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/progejan/KooliProjekt.BlazorWasm/Pages/FoodItems.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9vZEl0ZW1zLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/progejan/KooliProjekt.BlazorWasm/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/progejan/KooliProjekt.BlazorWasm/Pages/MealTypeEdit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVhbFR5cGVFZGl0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/progejan/KooliProjekt.BlazorWasm/Pages/MealTypes.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVhbFR5cGVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/progejan/KooliProjekt.BlazorWasm/Pages/MeasurmentTypeEdit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVhc3VybWVudFR5cGVFZGl0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/progejan/KooliProjekt.BlazorWasm/Pages/MeasurmentTypes.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVhc3VybWVudFR5cGVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/progejan/KooliProjekt.BlazorWasm/Pages/MeasurmentUpEdit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVhc3VybWVudFVwRWRpdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/progejan/KooliProjekt.BlazorWasm/Pages/MeasurmentUps.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVhc3VybWVudFVwcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/progejan/KooliProjekt.BlazorWasm/Pages/Weather.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2VhdGhlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/progejan/KooliProjekt.BlazorWasm/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/progejan/KooliProjekt.BlazorWasm/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-yh0m758gzc
+
+[D:/progejan/KooliProjekt.BlazorWasm/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-3tobont9nj

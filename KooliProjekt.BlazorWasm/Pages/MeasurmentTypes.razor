@@ -1,0 +1,84 @@
+@page "/measurmenttypes"
+@inject IApiClient<MeasurmentType> apiClient
+@inject IJSRuntime JS
+
+<PageTitle>Measurment types</PageTitle>
+
+<h1>Measurment types</h1>
+
+<p class="alert-danger">@error</p>
+
+@if (items == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <p><a class="btn btn-primary" href="/measurmenttypes/create">Add new</a></p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Code</th>
+                <th>Description</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in items)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Code</td>
+                    <td>@item.Description</td>
+                    <td>
+                        <a class="btn btn-success" href="/measurmenttypes/edit/@item.Id">Edit</a>
+                        <button class="btn btn-danger" @onclick="() => Delete(item)">Delete</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private IList<MeasurmentType> items;
+    private string error = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadData();
+    }
+
+    private async Task LoadData()
+    {
+        var result = await apiClient.List(1, 100);
+        if (result.HasErrors || result.Value == null)
+        {
+            error = "Viga andmete laadimisel!";
+            items = new List<MeasurmentType>();
+            return;
+        }
+
+        items = result.Value.Results;
+    }
+
+    private async Task Delete(MeasurmentType item)
+    {
+        var confirmed = await JS.InvokeAsync<bool>("confirm", "Oled kindel, et soovid kustutada " + item.Description + "?");
+        if (!confirmed)
+        {
+            return;
+        }
+
+        error = "";
+        var result = await apiClient.Delete(item.Id);
+        if (result.HasErrors)
+        {
+            error = "Viga kustutamisel!";
+            return;
+        }
+
+        await LoadData();
+    }
+}

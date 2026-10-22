@@ -1,0 +1,14 @@
+D:\progejan\KooliProjekt.Application\bin\Debug\net8.0\KooliProjekt.Application.deps.json
+D:\progejan\KooliProjekt.Application\bin\Debug\net8.0\KooliProjekt.Application.runtimeconfig.json
+D:\progejan\KooliProjekt.Application\bin\Debug\net8.0\KooliProjekt.Application.dll
+D:\progejan\KooliProjekt.Application\bin\Debug\net8.0\KooliProjekt.Application.pdb
+D:\progejan\KooliProjekt.Application\obj\Debug\net8.0\KooliProjekt.Application.csproj.AssemblyReference.cache
+D:\progejan\KooliProjekt.Application\obj\Debug\net8.0\KooliProjekt.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\progejan\KooliProjekt.Application\obj\Debug\net8.0\KooliProjekt.Application.AssemblyInfoInputs.cache
+D:\progejan\KooliProjekt.Application\obj\Debug\net8.0\KooliProjekt.Application.AssemblyInfo.cs
+D:\progejan\KooliProjekt.Application\obj\Debug\net8.0\KooliProjekt.Application.csproj.CoreCompileInputs.cache
+D:\progejan\KooliProjekt.Application\obj\Debug\net8.0\KooliProjekt.Application.dll
+D:\progejan\KooliProjekt.Application\obj\Debug\net8.0\refint\KooliProjekt.Application.dll
+D:\progejan\KooliProjekt.Application\obj\Debug\net8.0\KooliProjekt.Application.pdb
+D:\progejan\KooliProjekt.Application\obj\Debug\net8.0\KooliProjekt.Application.genruntimeconfig.cache
+D:\progejan\KooliProjekt.Application\obj\Debug\net8.0\ref\KooliProjekt.Application.dll

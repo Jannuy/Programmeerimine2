@@ -1,0 +1,86 @@
+@page "/foodentries"
+@inject IApiClient<FoodEntry> apiClient
+@inject IJSRuntime JS
+
+<PageTitle>Food entries</PageTitle>
+
+<h1>Food entries</h1>
+
+<p class="alert-danger">@error</p>
+
+@if (items == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <p><a class="btn btn-primary" href="/foodentries/create">Add new</a></p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Food entry item</th>
+                <th>Quantity</th>
+                <th>Created at</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in items)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.FoodEntryItem</td>
+                    <td>@item.Quantity</td>
+                    <td>@item.CreatedAt.ToString("dd.MM.yyyy HH:mm")</td>
+                    <td>
+                        <a class="btn btn-success" href="/foodentries/edit/@item.Id">Edit</a>
+                        <button class="btn btn-danger" @onclick="() => Delete(item)">Delete</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private IList<FoodEntry> items;
+    private string error = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadData();
+    }
+
+    private async Task LoadData()
+    {
+        var result = await apiClient.List(1, 100);
+        if (result.HasErrors || result.Value == null)
+        {
+            error = "Viga andmete laadimisel!";
+            items = new List<FoodEntry>();
+            return;
+        }
+
+        items = result.Value.Results;
+    }
+
+    private async Task Delete(FoodEntry item)
+    {
+        var confirmed = await JS.InvokeAsync<bool>("confirm", "Oled kindel, et soovid kustutada " + item.FoodEntryItem + "?");
+        if (!confirmed)
+        {
+            return;
+        }
+
+        error = "";
+        var result = await apiClient.Delete(item.Id);
+        if (result.HasErrors)
+        {
+            error = "Viga kustutamisel!";
+            return;
+        }
+
+        await LoadData();
+    }
+}

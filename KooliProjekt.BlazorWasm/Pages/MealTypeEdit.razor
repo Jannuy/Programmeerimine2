@@ -1,0 +1,100 @@
+@page "/mealtypes/create"
+@page "/mealtypes/edit/{Id:int}"
+
+@inject IApiClient<MealType> apiClient
+@inject NavigationManager NavManager
+
+<PageTitle>@title meal type</PageTitle>
+
+<h3>@title meal type</h3>
+
+<EditForm EditContext="editContext" OnSubmit="@FormSubmitted">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <p class="alert-danger">@error</p>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">ID</label>
+        <div class="col-sm-10">
+            @item.Id
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Meal type ID</label>
+        <div class="col-sm-10">
+            <InputNumber class="form-control" @bind-Value="item.MealTypeId" />
+            <ValidationMessage For="@(() => item.MealTypeId)" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary">Save</button>
+            <a class="btn btn-secondary" href="/mealtypes">Back</a>
+        </div>
+    </div>
+</EditForm>
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    private string error = "";
+    private string title = "Edit";
+    private EditContext editContext;
+    private MealType item = new MealType();
+
+    private ValidationMessageStore messageStore;
+
+    protected override async Task OnInitializedAsync()
+    {
+        editContext = new EditContext(item);
+        messageStore = new ValidationMessageStore(editContext);
+
+        if (Id == 0)
+        {
+            title = "Add";
+            return;
+        }
+
+        var response = await apiClient.Get(Id);
+        if (response.HasErrors || response.Value == null)
+        {
+            error = "Kirjet ei leitud!";
+            return;
+        }
+
+        item = response.Value;
+        editContext = new EditContext(item);
+        messageStore = new ValidationMessageStore(editContext);
+    }
+
+    private async Task FormSubmitted()
+    {
+        // Eemalda eelnevad veateated
+        error = "";
+        messageStore?.Clear();
+
+        var result = await apiClient.Save(item);
+        if (!result.HasErrors)
+        {
+            NavManager.NavigateTo("/mealtypes");
+            return;
+        }
+
+        // Üldised vead (nt API ei vasta) näidatakse kokkuvõttes
+        foreach (var err in result.Errors ?? new List<string>())
+        {
+            messageStore?.Add(new FieldIdentifier(item, string.Empty), err);
+        }
+
+        // Väljade vead tulevad API-st camelCase nimedega, nt "name" -> "Name"
+        foreach (var propertyError in result.PropertyErrors ?? new Dictionary<string, string>())
+        {
+            var propertyName = propertyError.Key[0].ToString().ToUpper() + propertyError.Key.Substring(1);
+            messageStore?.Add(new FieldIdentifier(item, propertyName), propertyError.Value);
+        }
+
+        // Teavita EditForm'i, et vead on muutunud
+        editContext?.NotifyValidationStateChanged();
+    }
+}

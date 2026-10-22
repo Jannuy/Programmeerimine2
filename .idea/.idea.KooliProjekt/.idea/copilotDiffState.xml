@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/KooliProjekt.Application/Features/FoodEntrys/DeleteFoodEntrysCommand.cs">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/KooliProjekt.Application/Features/FoodEntrys/DeleteFoodEntrysCommand.cs" />
+              <option name="updatedContent" value="using KooliProjekt.Application.Behaviors;&#10;using KooliProjekt.Application.Infrastructure.Results;&#10;using MediatR;&#10;&#10;namespace KooliProjekt.Application.Features.FoodEntrys&#10;{&#10;    public class DeleteFoodEntrysCommand : IRequest&lt;OperationResult&gt;, ITransactional&#10;    {&#10;        public int Id { get; set; }&#10;    }&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/KooliProjekt.Application/Features/FoodEntrys/DeleteFoodEntrysCommandHandler.cs">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/KooliProjekt.Application/Features/FoodEntrys/DeleteFoodEntrysCommandHandler.cs" />
+              <option name="updatedContent" value="using System.Linq;&#10;using System.Threading;&#10;using System.Threading.Tasks;&#10;using KooliProjekt.Application.Data;&#10;using KooliProjekt.Application.Infrastructure.Results;&#10;using MediatR;&#10;using Microsoft.EntityFrameworkCore;&#10;&#10;namespace KooliProjekt.Application.Features.FoodEntrys&#10;{&#10;    public class DeleteFoodEntrysCommandHandler : IRequestHandler&lt;DeleteFoodEntrysCommand, OperationResult&gt;&#10;    {&#10;        private readonly ApplicationDbContext _dbContext;&#10;&#10;        public DeleteFoodEntrysCommandHandler(ApplicationDbContext dbContext)&#10;        {&#10;            _dbContext = dbContext;&#10;        }&#10;&#10;        public async Task&lt;OperationResult&gt; Handle(DeleteFoodEntrysCommand request, CancellationToken cancellationToken)&#10;        {&#10;            var result = new OperationResult();&#10;&#10;            await _dbContext&#10;                .FoodEntries&#10;                .Where(t =&gt; t.Id == request.Id)&#10;                .ExecuteDeleteAsync();&#10;&#10;            return result;&#10;        }&#10;    }&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/KooliProjekt.Application/Features/FoodEntrys/GetFoodEntrysQuery.cs">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/KooliProjekt.Application/Features/FoodEntrys/GetFoodEntrysQuery.cs" />
+              <option name="updatedContent" value="using KooliProjekt.Application.Data;&#10;using KooliProjekt.Application.Infrastructure.Results;&#10;using MediatR;&#10;&#10;namespace KooliProjekt.Application.Features.FoodEntrys&#10;{&#10;    public class GetFoodEntrysQuery : IRequest&lt;OperationResult&lt;object&gt;&gt;&#10;    {&#10;        public int Id { get; set; }&#10;    }&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/KooliProjekt.Application/Features/FoodEntrys/GetFoodEntrysQueryHandler.cs">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/KooliProjekt.Application/Features/FoodEntrys/GetFoodEntrysQueryHandler.cs" />
+              <option name="updatedContent" value="using System.Threading;&#10;using System.Threading.Tasks;&#10;using KooliProjekt.Application.Data;&#10;using KooliProjekt.Application.Infrastructure.Results;&#10;using MediatR;&#10;using Microsoft.EntityFrameworkCore;&#10;&#10;namespace KooliProjekt.Application.Features.FoodEntrys&#10;{&#10;    public class GetFoodEntrysQueryHandler : IRequestHandler&lt;GetFoodEntrysQuery, OperationResult&lt;object&gt;&gt;&#10;    {&#10;        private readonly ApplicationDbContext _dbContext;&#10;&#10;        public GetFoodEntrysQueryHandler(ApplicationDbContext dbContext)&#10;        {&#10;            _dbContext = dbContext;&#10;        }&#10;&#10;        public async Task&lt;OperationResult&lt;object&gt;&gt; Handle(GetFoodEntrysQuery request, CancellationToken cancellationToken)&#10;        {&#10;            var result = new OperationResult&lt;object&gt;();&#10;            var foodEntry = await _dbContext.FoodEntries.FirstOrDefaultAsync(f =&gt; f.Id == request.Id, cancellationToken);&#10;&#10;            result.Value = new&#10;            {&#10;                Id = foodEntry.Id,&#10;                FoodItemId = foodEntry.FoodItemId,&#10;                Quantity = foodEntry.Quantity,&#10;                EntryDate = foodEntry.EntryDate&#10;            };&#10;&#10;            return result;&#10;        }&#10;    }&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/KooliProjekt.Application/Features/FoodEntrys/SaveFoodEntrysCommand.cs">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/KooliProjekt.Application/Features/FoodEntrys/SaveFoodEntrysCommand.cs" />
+              <option name="updatedContent" value="using KooliProjekt.Application.Behaviors;&#10;using KooliProjekt.Application.Infrastructure.Results;&#10;using MediatR;&#10;using System;&#10;&#10;namespace KooliProjekt.Application.Features.FoodEntrys&#10;{&#10;    public class SaveFoodEntrysCommand : IRequest&lt;OperationResult&gt;, ITransactional&#10;    {&#10;        public int Id { get; set; }&#10;        public int FoodItemId { get; set; }&#10;        public int Quantity { get; set; }&#10;        public DateTime EntryDate { get; set; }&#10;    }&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/KooliProjekt.Application/Features/FoodEntrys/SaveFoodEntrysCommandHandler.cs">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/KooliProjekt.Application/Features/FoodEntrys/SaveFoodEntrysCommandHandler.cs" />
+              <option name="updatedContent" value="using System.Threading;&#10;using System.Threading.Tasks;&#10;using KooliProjekt.Application.Data;&#10;using KooliProjekt.Application.Infrastructure.Results;&#10;using MediatR;&#10;&#10;namespace KooliProjekt.Application.Features.FoodEntrys&#10;{&#10;    public class SaveFoodEntrysCommandHandler : IRequestHandler&lt;SaveFoodEntrysCommand, OperationResult&gt;&#10;    {&#10;        private readonly ApplicationDbContext _dbContext;&#10;&#10;        public SaveFoodEntrysCommandHandler(ApplicationDbContext dbContext)&#10;        {&#10;            _dbContext = dbContext;&#10;        }&#10;&#10;        public async Task&lt;OperationResult&gt; Handle(SaveFoodEntrysCommand request, CancellationToken cancellationToken)&#10;        {&#10;            var result = new OperationResult();&#10;&#10;            var foodEntry = new FoodEntry();&#10;            if (request.Id != 0)&#10;            {&#10;                foodEntry = await _dbContext.FoodEntries.FindAsync(new object[] { request.Id }, cancellationToken: cancellationToken);&#10;            }&#10;&#10;            foodEntry.FoodItemId = request.FoodItemId;&#10;            foodEntry.Quantity = request.Quantity;&#10;            foodEntry.EntryDate = request.EntryDate;&#10;&#10;            if (request.Id == 0)&#10;            {&#10;                _dbContext.FoodEntries.Add(foodEntry);&#10;            }&#10;&#10;            await _dbContext.SaveChangesAsync(cancellationToken);&#10;&#10;            return result;&#10;        }&#10;    }&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/KooliProjekt.Application/Features/FoodEntrys/SaveFoodEntrysCommandValidator.cs">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/KooliProjekt.Application/Features/FoodEntrys/SaveFoodEntrysCommandValidator.cs" />
+              <option name="updatedContent" value="using FluentValidation;&#10;using KooliProjekt.Application.Data;&#10;&#10;namespace KooliProjekt.Application.Features.FoodEntrys&#10;{&#10;    public class SaveFoodEntrysCommandValidator : AbstractValidator&lt;SaveFoodEntrysCommand&gt;&#10;    {&#10;        public SaveFoodEntrysCommandValidator(ApplicationDbContext context)&#10;        {&#10;            RuleFor(x =&gt; x.FoodItemId)&#10;                .GreaterThan(0).WithMessage(&quot;FoodItemId is required&quot;);&#10;&#10;            RuleFor(x =&gt; x.Quantity)&#10;                .GreaterThan(0).WithMessage(&quot;Quantity must be greater than 0&quot;);&#10;&#10;            RuleFor(x =&gt; x.EntryDate)&#10;                .NotEmpty().WithMessage(&quot;EntryDate is required&quot;);&#10;        }&#10;    }&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

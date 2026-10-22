@@ -1,0 +1,610 @@
+[
+  {
+    "ContainingType": "KooliProjekt.WebAPI.Controllers.DeodItemsController",
+    "Method": "Delete",
+    "RelativePath": "api/DeodItems/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "KooliProjekt.Application.Features.DeodItems.DeleteDeodItemCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KooliProjekt.WebAPI.Controllers.DeodItemsController",
+    "Method": "Get",
+    "RelativePath": "api/DeodItems/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KooliProjekt.WebAPI.Controllers.DeodItemsController",
+    "Method": "List",
+    "RelativePath": "api/DeodItems/List",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KooliProjekt.WebAPI.Controllers.DeodItemsController",
+    "Method": "Save",
+    "RelativePath": "api/DeodItems/Save",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "KooliProjekt.Application.Features.DeodItems.SaveDeodItemCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KooliProjekt.WebAPI.Controllers.EmployeePatientsController",
+    "Method": "Delete",
+    "RelativePath": "api/EmployeePatients/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "KooliProjekt.Application.Features.EmployeePatients.DeleteEmployeePatientCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KooliProjekt.WebAPI.Controllers.EmployeePatientsController",
+    "Method": "Get",
+    "RelativePath": "api/EmployeePatients/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KooliProjekt.WebAPI.Controllers.EmployeePatientsController",
+    "Method": "List",
+    "RelativePath": "api/EmployeePatients/List",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "LastName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KooliProjekt.WebAPI.Controllers.EmployeePatientsController",
+    "Method": "Save",
+    "RelativePath": "api/EmployeePatients/Save",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "KooliProjekt.Application.Features.EmployeePatients.SaveEmployeePatientCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KooliProjekt.WebAPI.Controllers.EmployeesController",
+    "Method": "Delete",
+    "RelativePath": "api/Employees/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "KooliProjekt.Application.Features.Employees.DeleteEmployeeCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KooliProjekt.WebAPI.Controllers.EmployeesController",
+    "Method": "Get",
+    "RelativePath": "api/Employees/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KooliProjekt.WebAPI.Controllers.EmployeesController",
+    "Method": "List",
+    "RelativePath": "api/Employees/List",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "FullName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KooliProjekt.WebAPI.Controllers.EmployeesController",
+    "Method": "Save",
+    "RelativePath": "api/Employees/Save",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "KooliProjekt.Application.Features.Employees.SaveEmployeeCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KooliProjekt.WebAPI.Controllers.FoodEntriesController",
+    "Method": "Delete",
+    "RelativePath": "api/FoodEntries/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "KooliProjekt.Application.Features.FoodEntries.DeleteFoodEntryCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KooliProjekt.WebAPI.Controllers.FoodEntriesController",
+    "Method": "Get",
+    "RelativePath": "api/FoodEntries/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KooliProjekt.WebAPI.Controllers.FoodEntriesController",
+    "Method": "List",
+    "RelativePath": "api/FoodEntries/List",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "FoodEntryItem",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KooliProjekt.WebAPI.Controllers.FoodEntriesController",
+    "Method": "Save",
+    "RelativePath": "api/FoodEntries/Save",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "KooliProjekt.Application.Features.FoodEntries.SaveFoodEntryCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KooliProjekt.WebAPI.Controllers.FoodItemsController",
+    "Method": "Delete",
+    "RelativePath": "api/FoodItems/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "KooliProjekt.Application.Features.FoodItems.DeleteFoodItemCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KooliProjekt.WebAPI.Controllers.FoodItemsController",
+    "Method": "Get",
+    "RelativePath": "api/FoodItems/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KooliProjekt.WebAPI.Controllers.FoodItemsController",
+    "Method": "List",
+    "RelativePath": "api/FoodItems/List",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KooliProjekt.WebAPI.Controllers.FoodItemsController",
+    "Method": "Save",
+    "RelativePath": "api/FoodItems/Save",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "KooliProjekt.Application.Features.FoodItems.SaveFoodItemCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KooliProjekt.WebAPI.Controllers.MealTypesController",
+    "Method": "Delete",
+    "RelativePath": "api/MealTypes/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "KooliProjekt.Application.Features.MealTypes.DeleteMealTypeCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KooliProjekt.WebAPI.Controllers.MealTypesController",
+    "Method": "Get",
+    "RelativePath": "api/MealTypes/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KooliProjekt.WebAPI.Controllers.MealTypesController",
+    "Method": "List",
+    "RelativePath": "api/MealTypes/List",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KooliProjekt.WebAPI.Controllers.MealTypesController",
+    "Method": "Save",
+    "RelativePath": "api/MealTypes/Save",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "KooliProjekt.Application.Features.MealTypes.SaveMealTypeCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KooliProjekt.WebAPI.Controllers.MeasurmentTypesController",
+    "Method": "Delete",
+    "RelativePath": "api/MeasurmentTypes/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "KooliProjekt.Application.Features.MeasurmentTypes.DeleteMeasurmentTypeCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KooliProjekt.WebAPI.Controllers.MeasurmentTypesController",
+    "Method": "Get",
+    "RelativePath": "api/MeasurmentTypes/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KooliProjekt.WebAPI.Controllers.MeasurmentTypesController",
+    "Method": "List",
+    "RelativePath": "api/MeasurmentTypes/List",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KooliProjekt.WebAPI.Controllers.MeasurmentTypesController",
+    "Method": "Save",
+    "RelativePath": "api/MeasurmentTypes/Save",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "KooliProjekt.Application.Features.MeasurmentTypes.SaveMeasurmentTypeCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KooliProjekt.WebAPI.Controllers.MeasurmentUpsController",
+    "Method": "Delete",
+    "RelativePath": "api/MeasurmentUps/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "KooliProjekt.Application.Features.MeasurmentUps.DeleteMeasurmentUpCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KooliProjekt.WebAPI.Controllers.MeasurmentUpsController",
+    "Method": "Get",
+    "RelativePath": "api/MeasurmentUps/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KooliProjekt.WebAPI.Controllers.MeasurmentUpsController",
+    "Method": "List",
+    "RelativePath": "api/MeasurmentUps/List",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Notes",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KooliProjekt.WebAPI.Controllers.MeasurmentUpsController",
+    "Method": "Save",
+    "RelativePath": "api/MeasurmentUps/Save",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "KooliProjekt.Application.Features.MeasurmentUps.SaveMeasurmentUpCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KooliProjekt.WebAPI.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[KooliProjekt.WebAPI.WeatherForecast, KooliProjekt.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

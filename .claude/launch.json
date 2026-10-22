@@ -1,0 +1,7 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "webapi", "runtimeExecutable": "dotnet", "runtimeArgs": ["run", "--project", "KooliProjekt.WebAPI", "--launch-profile", "http"], "port": 5086 },
+    { "name": "blazor", "runtimeExecutable": "dotnet", "runtimeArgs": ["run", "--project", "KooliProjekt.BlazorWasm", "--launch-profile", "http"], "port": 5258 }
+  ]
+}
